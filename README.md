@@ -1,2 +1,6 @@
 # Smarthome-Control-Center-ESP32
-A Smarthome Control Center powered by an ESP32 Microcontroler and a TFT Touch Screen
+This is an Arduino sketch, wich realize a Smarthome Control Center. The used microcontroler is an ESP32. For displaying a TFT display with touch screen will be used. I used for example [AZ-Touch](https://www.az-delivery.de/products/az-touch-wandgehauseset-mit-2-8-zoll-touchscreen-fur-esp8266-und-esp32) which offers a nice case to hold all the hardware and an [ESP32-Development board](https://az-delivery.myshopify.com/products/esp32-developmentboard).
+The application includes three different functions:
+* **MQTT-Dashboard** You can freely place and configuer widgets on up to 16 screen pages. There are widgets to display analog data as numbers, as gauge or as color bar, displays for digital values. Also action widgets are available. Switch or button,  slider and rgb-slider for colors. The configuration will be saved in the flas file system and can be exportet/importet in JSON format over the built in web server.
+* **ESP-Now to MQTT Gateway** ESP NOW is a low energie data transfer protokol. It allows sensors to transmit the values for example every 5 minutes with a 1200mAh accu for about 200 days. The Smarthome-control-center can receive messages over ESP-NOW and sen these messages with a configurable topic to teh MQTT broker.
+* **MQTT automation** It is possible to define rules with conditions and actions. If all conditions in a rule are valid, one or more actions can be triggered.
